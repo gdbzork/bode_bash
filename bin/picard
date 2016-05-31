@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -z ${PICARD+x} ]
+then
+  echo Please define the '$PICARD' environment variable with the location of the Picard JAR file.
+  exit
+fi
+
+java -jar $PICARD $*
